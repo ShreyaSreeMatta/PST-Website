@@ -113,38 +113,21 @@ export default function HomePage() {
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#0e1113] to-transparent" />
         </div>
 
-        {/* Desktop photo — right 55% */}
-        <div className="absolute right-0 top-0 hidden h-full lg:block" style={{ width: '55%' }}>
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_50%_40%,_rgba(184,145,88,0.09),_transparent)]" />
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-60 bg-gradient-to-r from-[#0e1113] via-[#0e1113]/70 to-transparent" />
-          <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-12 bg-gradient-to-b from-[#0e1113] to-transparent" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-44 bg-gradient-to-t from-[#0e1113] to-transparent" />
-          <Image src="/hoi-headshot.png" alt="Hoi Wing Ng — Silicon Valley Real Estate Advisor" fill className="animate-fade-in delay-200 object-contain object-top" priority />
-          <div className="animate-pulse-glow animate-fade-up delay-500 absolute left-6 z-20" style={{ top: '58%' }}>
-            <div className="rounded-2xl border border-white/[0.12] bg-black/75 px-5 py-4 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
-              <div className="mb-2 flex items-center gap-2">
-                <span className="h-[5px] w-[5px] rounded-full bg-brand-accent" />
-                <span className="text-[9px] uppercase tracking-[0.4em] text-brand-accent">Top 1% Nationwide</span>
-              </div>
-              <p className="text-[15px] font-semibold text-white">Hoi Wing Ng</p>
-              <p className="mt-0.5 text-[11px] text-white/40">Intero Real Estate · BH Affiliate</p>
-            </div>
-          </div>
-        </div>
+        {/* Desktop grid: 45% text / 55% photo */}
+        <div className="mx-auto grid max-w-[1440px] lg:min-h-[760px] lg:grid-cols-[45%_55%]">
 
-        {/* Text — left 45% */}
-        <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-14">
-          <div className="flex flex-col justify-center py-12 lg:py-28" style={{ maxWidth: 'min(100%, 560px)' }}>
+          {/* Text column */}
+          <div className="flex flex-col justify-center px-6 py-10 sm:px-10 lg:px-16 lg:py-28">
             <div className="animate-fade-up delay-0 flex items-center gap-3">
               <span className="h-px w-6 shrink-0 bg-brand-accent/50" />
               <p className="text-[12px] uppercase tracking-[0.45em] text-brand-accent/80">Silicon Valley Real Estate Advisory</p>
             </div>
-            <h1 className="animate-fade-up delay-100 mt-6 text-[46px] font-semibold leading-[1.08] tracking-tight text-white sm:text-[54px] lg:text-[62px]">
+            <h1 className="animate-fade-up delay-100 mt-6 text-[44px] font-semibold leading-[1.08] tracking-tight text-white sm:text-[52px] lg:text-[60px]">
               Sell smarter.<br />
               <span className="text-white/55">Move forward</span><br />
               with confidence.
             </h1>
-            <p className="animate-fade-up delay-200 mt-7 text-[17px] leading-[1.8] text-white/55">
+            <p className="animate-fade-up delay-200 mt-7 max-w-[480px] text-[17px] leading-[1.8] text-white/55">
               Hoi Wing Ng helps long-term Bay Area homeowners sell, downsize, and transition — with premium strategy, deep local expertise, and multilingual guidance.
             </p>
             <div className="animate-fade-up delay-300 mt-10 flex flex-wrap gap-4">
@@ -153,6 +136,31 @@ export default function HomePage() {
             </div>
             <div className="animate-fade-up delay-400 mt-14">
               <AnimatedStats />
+            </div>
+          </div>
+
+          {/* Photo column — desktop only */}
+          <div className="relative hidden lg:block">
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_50%_40%,_rgba(184,145,88,0.09),_transparent)]" />
+            <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-48 bg-gradient-to-r from-[#0e1113] via-[#0e1113]/60 to-transparent" />
+            <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-10 bg-gradient-to-b from-[#0e1113] to-transparent" />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-44 bg-gradient-to-t from-[#0e1113] to-transparent" />
+            <Image
+              src="/hoi-headshot.png"
+              alt="Hoi Wing Ng — Silicon Valley Real Estate Advisor"
+              fill
+              className="animate-fade-in delay-200 object-contain object-top"
+              priority
+            />
+            <div className="animate-pulse-glow animate-fade-up delay-500 absolute bottom-[18%] left-8 z-20">
+              <div className="rounded-2xl border border-white/[0.12] bg-black/75 px-5 py-4 shadow-[0_8px_32px_rgba(0,0,0,0.5)] backdrop-blur-2xl">
+                <div className="mb-2 flex items-center gap-2">
+                  <span className="h-[5px] w-[5px] rounded-full bg-brand-accent" />
+                  <span className="text-[9px] uppercase tracking-[0.4em] text-brand-accent">Top 1% Nationwide</span>
+                </div>
+                <p className="text-[15px] font-semibold text-white">Hoi Wing Ng</p>
+                <p className="mt-0.5 text-[11px] text-white/40">Intero Real Estate · BH Affiliate</p>
+              </div>
             </div>
           </div>
         </div>
