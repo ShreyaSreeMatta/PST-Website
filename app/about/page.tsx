@@ -62,7 +62,7 @@ export default function AboutPage() {
             <TrustBar />
             <div className="flex flex-col gap-4 sm:flex-row">
               <Button href="/contact" variant="primary">Book a Consultation</Button>
-              <Button href="tel:4088253814" variant="secondary">Call 408-825-3814</Button>
+              <Button href="tel:4088253814" variant="ghost">Call 408-825-3814</Button>
             </div>
           </div>
         </div>
