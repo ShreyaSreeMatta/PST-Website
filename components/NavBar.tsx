@@ -71,7 +71,7 @@ export function NavBar() {
         {/* Logo — brightness-0 invert renders it white directly on the dark nav */}
         <Link href="/" className="group shrink-0 transition-opacity duration-200 hover:opacity-85">
           <Image
-            src="/Logo.png"
+            src="/logo.png"
             alt="Hoi Group Real Estate"
             width={200}
             height={64}
